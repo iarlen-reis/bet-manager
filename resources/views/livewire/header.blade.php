@@ -14,7 +14,7 @@
                 <li>
                     <a
                         href="/config"
-                        class="text-lg transition-opacity hover:opacity-85"
+                        class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         Configurações
                     </a>
@@ -22,7 +22,7 @@
                 <li>
                     <a
                         href="/config"
-                        class="text-lg transition-opacity hover:opacity-85"
+                        class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         Todas apostas
                     </a>
@@ -30,7 +30,7 @@
                 <li>
                     <a
                         href="/config"
-                        class="text-lg transition-opacity hover:opacity-85"
+                        class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         sair
                     </a>
@@ -41,7 +41,7 @@
                 <li>
                     <a
                         href="/login"
-                        class="text-lg transition-opacity hover:opacity-85"
+                        class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         Entrar
                     </a>
@@ -49,7 +49,7 @@
                 <li>
                     <a
                         href="/register"
-                        class="text-lg transition-opacity hover:opacity-85"
+                        class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         Cadastrar
                     </a>

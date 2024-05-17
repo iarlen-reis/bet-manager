@@ -8,6 +8,12 @@ class Header extends Component
 {
     public function render()
     {
-        return view('livewire.header');
+        return view('components.header');
+    }
+
+    public function logout() {
+        auth()->logout();
+
+        return redirect("/login");
     }
 }

@@ -1,3 +1,29 @@
+@script
+    <script>
+        const ul = document.querySelector('#mobile');
+        const buttonMobile = document.querySelector('#button-mobile');
+        const linksNavigation = document.querySelectorAll('.links-navigation');
+
+        buttonMobile.addEventListener('click', () => {
+            ul.classList.toggle('open');
+        });
+
+        linksNavigation.forEach((link) => {
+            if (window.innerWidth < 768) {
+                link.addEventListener('click', () => {
+                    ul.classList.remove('open');
+                });
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                ul.classList.remove('open');
+            }
+        });
+    </script>
+@endscript
+
 <header
     class="container relative mx-auto flex items-center justify-between p-3 py-4"
 >
@@ -14,6 +40,7 @@
                 <li>
                     <a
                         href="/config"
+                        wire:navigate
                         class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         Configurações
@@ -21,19 +48,20 @@
                 </li>
                 <li>
                     <a
-                        href="/config"
+                        href="/todas-apostas"
+                        wire:navigate
                         class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         Todas apostas
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="/config"
+                    <button
+                        wire:click="logout"
                         class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         sair
-                    </a>
+                    </button>
                 </li>
             @endauth
 
@@ -41,6 +69,7 @@
                 <li>
                     <a
                         href="/login"
+                        wire:navigate
                         class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         Entrar
@@ -49,6 +78,7 @@
                 <li>
                     <a
                         href="/register"
+                        wire:navigate
                         class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         Cadastrar

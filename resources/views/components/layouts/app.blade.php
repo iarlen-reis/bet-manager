@@ -10,15 +10,6 @@
             href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
             rel="stylesheet"
         />
-        <script
-            type="module"
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script
-            nomodule
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-        ></script>
-        <script src="/mobile.js" defer></script>
         <title>{{ $title ?? "Page Title" }}</title>
     </head>
 

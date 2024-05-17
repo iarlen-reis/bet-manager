@@ -3,7 +3,7 @@
     "label",
 ])
 
-<fieldset class="group flex flex-col gap-1">
+<fieldset class="w-full group flex flex-col gap-1">
     <label for="{{ $name }}" class="text-white/90">{{ $label }}</label>
     <div
         class="flex items-center gap-2 rounded border border-transparent bg-blue-400/10 px-3 py-4 group-hover:border-blue-400"

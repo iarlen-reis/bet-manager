@@ -15,6 +15,9 @@
 
     <body>
         <livewire:header />
+        <div class="container mx-auto flex items-center justify-end mt-2">
+           <livewire-notification />
+       </div>
         <main class="container mx-auto px-3">
             {{ $slot }}
         </main>

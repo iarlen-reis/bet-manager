@@ -88,7 +88,7 @@
         </ul>
         <div>
             <button class="md:hidden" id="button-mobile">
-                <ion-icon name="menu-outline" size="large"></ion-icon>
+                <x-gmdi-menu class="text-white w-8" />
             </button>
         </div>
     </nav>

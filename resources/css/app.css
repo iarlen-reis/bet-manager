@@ -10,6 +10,14 @@ html {
     font-family: "Sora", sans-serif;
 }
 
+input[type="radio"]:checked + label {
+    @apply bg-blue-400;
+}
+
+input[type="radio"]:checked + label span, input[type="radio"]:checked + label svg {
+    @apply text-white;
+}
+
 .open {
     @apply z-10 absolute bottom-0 left-0 right-0 top-16 flex h-screen w-full flex-col gap-2 bg-zinc-950 pt-6;
     animation: menu 0.3s ease-in-out;

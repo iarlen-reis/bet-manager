@@ -17,18 +17,16 @@
             </a>
         </div>
         <ul class="flex flex-col gap-4">
-            <li>
-                <x-betting-card status="red" />
-            </li>
-            <li>
-                <x-betting-card status="green" />
-            </li>
-            <li>
-                <x-betting-card />
-            </li>
-            <li>
-                <x-betting-card status="void" />
-            </li>
+            @foreach ($this->bets as $bet)
+                <x-betting-card
+                    name="{{ $bet->name }}"
+                    value="{{ $bet->value }}"
+                    status="{{ $bet->status }}"
+                    created_at="{{ $bet->created_at }}"
+                    market="{{ $bet->market }}"
+                    odds="{{ $bet->odds }}"
+                />
+            @endforeach
         </ul>
     </div>
 </div>

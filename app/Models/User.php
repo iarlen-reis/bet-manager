@@ -58,4 +58,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function bets() {
+        return $this->hasMany("App\Models\Bet");
+    }
 }

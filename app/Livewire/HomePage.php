@@ -38,6 +38,20 @@ class HomePage extends Component
     }
 
     #[Computed]
+    public function allMoneyBettingFormatted() {
+        $total = Bet::where('user_id', auth()->user()->id)
+        ->sum('result');
+
+        $absNum = abs($total);
+        $abbreviated = match (true) {
+            $absNum >= 1000000 => round($absNum / 1000000, 1) . 'M',
+            $absNum >= 1000 => round($absNum / 1000, 1) . 'K',
+            default => (string) $absNum,
+        };
+        return ($total < 0 ? '-' : '') . $abbreviated;
+    }
+
+    #[Computed]
     public function allMoneyBetting() {
         return Bet::where('user_id', auth()->user()->id)
         ->sum('result');

@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Bet;
+use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -58,6 +59,7 @@ class AddBetPage extends Component {
         $this->reset('name', 'market', 'status', 'amount', 'odds', 'sport', 'description');
     }
 
+    #[Title('Bet Manager | Adicionar aposta')]
     public function render() {
         return view('pages.add-bet-page');
     }

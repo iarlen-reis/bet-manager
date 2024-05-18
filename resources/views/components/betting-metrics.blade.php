@@ -9,7 +9,7 @@
             <span class="text-sm font-semibold md:text-xl">
                 {{ $this->allBetsCount }}
             </span>
-            <span class="text-xs md:text-lg">Total</span>
+            <span class="text-xs md:text-lg">Apostas</span>
         </div>
     </div>
 
@@ -30,10 +30,25 @@
             <x-gmdi-savings class="w-6 text-blue-400 md:w-8" />
         </div>
         <div class="flex flex-col">
-            <span class="text-sm font-semibold md:text-xl">
-                R$ {{ $this->allMoneyBetting }}
-            </span>
-            <span class="text-xs md:text-lg">dinheiro</span>
+            @if ($this->allMoneyBettingFormatted > 0)
+                <span title="{{number_format($this->allMoneyBetting, 2, ',', '.')}}" class="text-sm font-semibold text-green-400 md:text-xl">
+                    R$ {{ $this->allMoneyBettingFormatted }}
+                </span>
+            @endif
+
+            @if ($this->allMoneyBettingFormatted == 0)
+                <span title="{{number_format($this->allMoneyBetting, 2, ',', '.')}}" class="text-sm font-semibold md:text-xl">
+                    R$ {{ $this->allMoneyBettingFormatted }}
+                </span>
+            @endif
+
+            @if ($this->allMoneyBettingFormatted < 0)
+                <span title="{{number_format($this->allMoneyBetting, 2, ',', '.')}}" class="text-sm font-semibold text-red-400 md:text-xl">
+                    R$ {{ $this->allMoneyBettingFormatted }}
+                </span>
+            @endif
+
+            <span class="text-xs md:text-lg">Lucro/Perda</span>
         </div>
     </div>
     <div class="hidden xl:block">

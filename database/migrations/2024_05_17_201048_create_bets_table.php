@@ -16,10 +16,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('market');
             $table->string('status');
-            $table->string('value');
+            $table->decimal('amount');
             $table->string('odds');
             $table->string('sport');
             $table->text('description')->nullable();
+            $table->decimal('result');
             $table->timestamps();
         });
     }

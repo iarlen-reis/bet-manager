@@ -17,7 +17,7 @@ class AddBetPage extends Component {
     public $status = 'pedding';
 
     #[Validate('required', message: 'Campo obrigatório')]
-    public $value;
+    public $amount;
 
     #[Validate('required', message: 'Campo obrigatório')]
     public $odds;
@@ -31,15 +31,22 @@ class AddBetPage extends Component {
     public function create() {
         $this->validate();
 
+        $result = match ($this->status) {
+            'red' => number_format($this->amount * -1, 2, '.', ''),
+            'green'=> number_format($this->amount * $this->odds, 2, '.', ''),
+            default => 0,
+        };
+
         Bet::create([
             'name' => $this->name,
             'market'=> $this->market,
             'status'=> $this->status,
-            'value'=> $this->value,
+            'amount'=> $this->amount,
             'odds'=> $this->odds,
             'sport'=> $this->sport,
             'description'=> $this->description,
             'user_id' => auth()->user()->id,
+            'result' => (float) $result,
         ]);
 
 
@@ -48,7 +55,7 @@ class AddBetPage extends Component {
             'message' => 'Aposta adicionada com sucesso!',
         ]);
 
-        $this->reset('name', 'market', 'status', 'value', 'odds', 'sport', 'description');
+        $this->reset('name', 'market', 'status', 'amount', 'odds', 'sport', 'description');
     }
 
     public function render() {

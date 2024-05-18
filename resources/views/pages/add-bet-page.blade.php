@@ -10,7 +10,7 @@
             <x-gmdi-sell class="w-6 text-white/40" />
         </x-text-field>
 
-        <div class="flex items-center gap-3">
+        <div class="flex flex-col items-center gap-3 md:flex-row">
             <x-text-field
                 name="market"
                 label="Mercado selecionado"
@@ -20,7 +20,7 @@
                 <x-gmdi-question-mark-o class="w-6 text-white/40" />
             </x-text-field>
 
-            <div class="w-[180px] md:w-[200px]">
+            <div class="w-full md:w-[200px]">
                 <fieldset class="group flex flex-col gap-1">
                     <label for="status" class="text-white/90">Status</label>
                     <div
@@ -56,18 +56,29 @@
             </div>
         </div>
 
-        <div class="flex items-center gap-3">
+        <div class="flex flex-col items-center gap-3 md:flex-row">
             <x-text-field
-                name="value"
-                wire:model="value"
+                name="amount"
+                wire:model="amount"
                 label="Valor da aposta"
                 placeholder="Valor da aposta"
+                type="number"
+                min="0"
+                step="0.01"
             >
                 <x-gmdi-attach-money-o class="w-6 text-white/40" />
             </x-text-field>
 
-            <div class="w-[180px] md:w-[200px]">
-                <x-text-field name="odds" wire:model="odds" label="Odds">
+            <div class="w-full md:w-[200px]">
+                <x-text-field
+                    name="odds"
+                    wire:model="odds"
+                    label="Odds"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    placeholder="Odds"
+                >
                     <x-gmdi-swap-horiz class="w-6 text-white/40" />
                 </x-text-field>
             </div>

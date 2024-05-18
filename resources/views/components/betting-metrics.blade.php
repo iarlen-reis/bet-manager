@@ -6,7 +6,9 @@
             <x-gmdi-task-alt class="w-6 text-blue-400 md:w-8" />
         </div>
         <div class="flex flex-col">
-            <span class="text-sm font-semibold md:text-xl">300</span>
+            <span class="text-sm font-semibold md:text-xl">
+                {{ $this->allBetsCount }}
+            </span>
             <span class="text-xs md:text-lg">Total</span>
         </div>
     </div>
@@ -16,7 +18,9 @@
             <x-gmdi-calendar-month class="w-6 text-blue-400 md:w-8" />
         </div>
         <div class="flex flex-col">
-            <span class="text-sm font-semibold md:text-xl">2</span>
+            <span class="text-sm font-semibold md:text-xl">
+                {{ $this->allBetTodayCount }}
+            </span>
             <span class="text-xs md:text-lg">Hoje</span>
         </div>
     </div>
@@ -26,7 +30,9 @@
             <x-gmdi-savings class="w-6 text-blue-400 md:w-8" />
         </div>
         <div class="flex flex-col">
-            <span class="text-sm font-semibold md:text-xl">R$ 300</span>
+            <span class="text-sm font-semibold md:text-xl">
+                R$ {{ $this->allMoneyBetting }}
+            </span>
             <span class="text-xs md:text-lg">dinheiro</span>
         </div>
     </div>

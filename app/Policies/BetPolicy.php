@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Policies;
+
+use App\Models\Bet;
+use App\Models\User;
+
+class BetPolicy {
+    /**
+     * Determine whether the user can view the model.
+     */
+    public function view(User $user, Bet $bet): bool
+    {
+        return $user->id === $bet->user_id;
+    }
+
+    /**
+     * Determine whether the user can create models.
+     */
+    public function create(): bool
+    {
+        return auth()->check();
+    }
+
+    /**
+     * Determine whether the user can update the model.
+     */
+    public function update(User $user, Bet $bet): bool
+    {
+        return $user->id === $bet->user_id;
+    }
+
+    /**
+     * Determine whether the user can delete the model.
+     */
+    public function delete(User $user, Bet $bet): bool
+    {
+        return $user->id === $bet->user_id;
+    }
+}

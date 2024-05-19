@@ -39,20 +39,29 @@
             @auth
                 <li>
                     <a
-                        href="/config"
-                        wire:navigate
-                        class="links-navigation text-lg transition-opacity hover:opacity-85"
-                    >
-                        Configurações
-                    </a>
-                </li>
-                <li>
-                    <a
                         href="/todas-apostas"
                         wire:navigate
                         class="links-navigation text-lg transition-opacity hover:opacity-85"
                     >
                         Todas apostas
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="/adicionar-aposta"
+                        wire:navigate
+                        class="links-navigation text-lg transition-opacity hover:opacity-85"
+                    >
+                        Adicionar aposta
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="/config"
+                        wire:navigate
+                        class="links-navigation text-lg transition-opacity hover:opacity-85"
+                    >
+                        Configurações
                     </a>
                 </li>
                 <li>

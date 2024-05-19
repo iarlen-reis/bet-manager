@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\AddBetPage;
+use App\Livewire\AllBetsPage;
 use App\Livewire\BetDetail;
 use App\Livewire\BetEditPage;
 use App\Livewire\HomePage;
@@ -19,4 +20,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/adicionar-aposta', AddBetPage::class);
     Route::get('/aposta/{id}', BetDetail::class);
     Route::get('/aposta/editar/{id}', BetEditPage::class);
+    Route::get('/todas-apostas', AllBetsPage::class);
 });

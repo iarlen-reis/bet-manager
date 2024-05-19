@@ -20,7 +20,7 @@ class HomePage extends Component
     public function bets() {
         return Bet::where('user_id', auth()->user()->id)
             ->latest('created_at')
-            ->take(4)
+            ->take(6)
             ->get();
     }
 

@@ -53,9 +53,7 @@
     @if ($this->bet->description)
         <div class="flex flex-col gap-1">
             <h2 class="text-lg md:text-xl lg:text-2xl">Descricão</h2>
-            <p class="text-zinc-400 md:max-w-[700px] md:text-lg lg:text-xl">
-                {{ $this->bet->description }}
-            </p>
+            <p class="text-zinc-400 md:max-w-[700px] md:text-lg lg:text-xl whitespace-pre-line">{{ $this->bet->description }}</p>
         </div>
     @endif
 

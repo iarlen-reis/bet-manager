@@ -3,25 +3,25 @@
 >
     <div class="flex items-center gap-3">
         <div class="w-fit rounded bg-blue-400/55 p-2 md:p-4">
-            <x-gmdi-task-alt class="w-6 text-blue-400 md:w-8" />
+            <x-gmdi-calendar-month class="w-6 text-blue-400 md:w-8" />
         </div>
         <div class="flex flex-col">
-            <span class="text-sm font-semibold md:text-xl">
-                {{ $this->allBetsCount }}
+            <span class="text-sm font-semibold md:text-xl" title="{{ $this->allBetTodayCount }} apostas">
+                {{ $this->allBetTodayCount }}
             </span>
-            <span class="text-xs md:text-lg">Apostas</span>
+            <span class="text-xs md:text-lg">Hoje</span>
         </div>
     </div>
 
     <div class="flex items-center gap-3">
         <div class="w-fit rounded bg-blue-400/55 p-2 md:p-4">
-            <x-gmdi-calendar-month class="w-6 text-blue-400 md:w-8" />
+            <x-gmdi-task-alt class="w-6 text-blue-400 md:w-8" />
         </div>
         <div class="flex flex-col">
-            <span class="text-sm font-semibold md:text-xl">
-                {{ $this->allBetTodayCount }}
+            <span class="text-sm font-semibold md:text-xl" title="{{ $this->allBetsCount }} apostas">
+                {{ $this->allBetsCount }}
             </span>
-            <span class="text-xs md:text-lg">Hoje</span>
+            <span class="text-xs md:text-lg">Total</span>
         </div>
     </div>
 

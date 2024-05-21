@@ -10,6 +10,7 @@
             href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
             rel="stylesheet"
         />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>{{ $title ?? "Page Title" }}</title>
     </head>
 

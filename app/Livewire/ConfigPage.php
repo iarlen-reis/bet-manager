@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Locked;
+use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -63,6 +64,7 @@ class ConfigPage extends Component
         ]);
     }
 
+    #[Title('Bet Manager | Configurações')]
     public function render()
     {
         return view('pages.config-page');

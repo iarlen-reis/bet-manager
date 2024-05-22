@@ -32,23 +32,23 @@
         <div class="flex flex-col">
             @if ($this->allMoneyBettingFormatted > 0)
                 <span title="{{number_format($this->allMoneyBetting, 2, ',', '.')}}" class="text-sm font-semibold text-green-400 md:text-xl">
-                    R$ {{ $this->allMoneyBettingFormatted }}
+                    R$ {{ number_format($this->allMoneyBettingFormatted, 2, ',', '.') }}
                 </span>
             @endif
 
             @if ($this->allMoneyBettingFormatted == 0)
                 <span title="{{number_format($this->allMoneyBetting, 2, ',', '.')}}" class="text-sm font-semibold md:text-xl">
-                    R$ {{ $this->allMoneyBettingFormatted }}
+                    R$ {{ number_format($this->allMoneyBettingFormatted, 2, ',', '.') }}
                 </span>
             @endif
 
             @if ($this->allMoneyBettingFormatted < 0)
                 <span title="{{number_format($this->allMoneyBetting, 2, ',', '.')}}" class="text-sm font-semibold text-red-400 md:text-xl">
-                    R$ {{ $this->allMoneyBettingFormatted }}
+                    R$ {{ number_format($this->allMoneyBettingFormatted, 2, ',', '.') }}
                 </span>
             @endif
 
-            <span class="text-xs md:text-lg">Lucro/Perda</span>
+            <span class="text-xs md:text-lg">Lucro/Prejuízo</span>
         </div>
     </div>
     <div class="hidden xl:block">
